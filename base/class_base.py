@@ -32,10 +32,11 @@ class Base:
     """Make screenshot"""
 
     def make_screenshot(self):
-        now_date = datetime.datetime.today().strftime("%Y.%m.%d.%H.%M.%S")
-        name_screenshot = 'screenshot' + now_date + '.png'
-        self.driver.save_screenshot(
-            'C:\\Users\\ASUS\\PycharmProjects\\digital_bookstore_project\\screen\\' + name_screenshot)
+        date_now = datetime.datetime.today().strftime("%Y.%m.%d.%H.%M.%S")
+        name_screenshot = 'screenshot' + date_now + '.png'
+        self.driver.save_screenshot('../screen/' + name_screenshot)
+        print("Screenshot ready")
+
 
 
     """Assert Book title"""

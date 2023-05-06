@@ -15,6 +15,7 @@ class Book_page(Base):
         self.driver = driver
 
 
+    """Getting book info from the book page and adding book to Cart"""
 
     # Locators
 
@@ -67,7 +68,7 @@ class Book_page(Base):
 
     def add_book_to_cart(self):
         self.get_book_cart_icon().click()
-        print("The book added to cart")
+        print("The book added to Cart")
 
     def close_discount_pop_up(self):
         self.get_discount_pop_up_close().click()
@@ -81,12 +82,27 @@ class Book_page(Base):
 
     # Methods
 
+
     def book_info(self):
+
+        """Get current URL"""
         self.get_current_url()
+
+        """Print book title from book page"""
         self.print_book_title()
+
+        """Print final book price with discount from book page"""
         self.print_book_price()
+
+        """Click button with cart icon"""
         self.add_book_to_cart()
+
+        """Close the pop-up about discounts"""
         self.close_discount_pop_up()
-        time.sleep(5)
+
+        """Wait so not to click the wrong button"""
+        time.sleep(3)
+
+        """Click cart icon one more time so to go to Cart"""
         self.click_cart_icon()
 

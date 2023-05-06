@@ -13,6 +13,9 @@ class Personal_info(Base):
         self.driver = driver
 
 
+    """Editing personal info"""
+
+
     # Locators
 
 
@@ -109,18 +112,48 @@ class Personal_info(Base):
 
 
     def input_personal_info(self):
+
+        """Get current URL"""
         self.get_current_url()
+
+        """Go to About Me section so to edit personal information"""
         self.click_about_me()
+
+        """Click 'Edit name' icon"""
         self.click_edit_name()
+
+        """Clear 'First name' field"""
         self.clear_first_name()
+
+        """Input new first name"""
         self.input_first_name("QA")
+
+        """Clear 'Last name' field"""
         self.clear_last_name()
+
+        """Input new last name"""
         self.input_last_name("Student")
+
+        """Click Ok button"""
         self.click_ok_button()
+
+        """Click 'Edit Words About Me' icon"""
         self.click_words_about_me_edit()
+
+        """Clear 'Words About Me' field"""
         self.clear_words_about_me()
+
+        """Input new Words About Me"""
         self.input_words_about_me("Think different")
+
+        """Click save button"""
         self.click_save_button()
+
+        """Compare URL with the one of personal information section"""
         self.assert_url("https://www.litres.ru/pages/personal_cabinet_about_me/")
-        time.sleep(5)
+
+        """Wait so to make a screenshot"""
+        time.sleep(3)
+
+        """Make screenshot"""
         self.make_screenshot()

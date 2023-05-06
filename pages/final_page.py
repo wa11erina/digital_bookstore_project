@@ -13,6 +13,10 @@ class Final_page(Base):
         super().__init__(driver)
         self.driver = driver
 
+
+    """Removing book from Cart"""
+
+
     # Locators
 
     my_books_menu = "//a[@href='/pages/my_books_all/']"
@@ -51,7 +55,7 @@ class Final_page(Base):
 
     def click_my_books_cart(self):
         self.get_my_books_cart().click()
-        print("Navigate to the Cart")
+        print("Navigate to Cart")
 
     def click_remove_book(self):
         self.get_remove_book().click()
@@ -67,11 +71,27 @@ class Final_page(Base):
 
 
     def remove_book_from_cart(self):
+
+        """Go back so to leave payment pop-up"""
         self.navigate_back()
+
+        """Go to My Books Menu so to remove book from Cart"""
         self.click_my_books_menu()
+
+        """Click Cart button"""
         self.click_my_books_cart()
-        time.sleep(5)
+
+        """Wait so not to click the wrong button"""
+        time.sleep(3)
+
+        """Compare URL with the one of Cart page"""
         self.assert_url("https://www.litres.ru/pages/new_basket/")
+
+        """Click Remove button under the book"""
         self.click_remove_book()
-        time.sleep(5)
+
+        """Wait so to see the confirmation pop-up"""
+        time.sleep(3)
+
+        """Click Remove button again so to finally remove book from Cart"""
         self.click_want_to_remove()

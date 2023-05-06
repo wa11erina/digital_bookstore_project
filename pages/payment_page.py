@@ -14,6 +14,9 @@ class Payment_page(Base):
         self.driver = driver
 
 
+    """Payment"""
+
+
     # Locators
 
     navigate_to_payment = "//div[@class='ButtonV3-module__buttonContent_3AZ1N']"
@@ -28,7 +31,6 @@ class Payment_page(Base):
 
     # Actions
 
-
     def click_navigate_to_payment(self):
         self.get_navigate_to_payment().click()
         print("Navigate to Payment")
@@ -36,9 +38,16 @@ class Payment_page(Base):
 
     # Methods
 
-
     def payment(self):
+
+        """Get current URL"""
         self.get_current_url()
+
+        """Navigate to Payment"""
         self.click_navigate_to_payment()
-        time.sleep(5)
+
+        """Wait so to make a screenshot"""
+        time.sleep(3)
+
+        """Make screenshot"""
         self.make_screenshot()

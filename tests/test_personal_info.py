@@ -8,6 +8,9 @@ from pages.personal_info_page import Personal_info
 
 
 def test_personal_info(set_up):
+
+    """Authorization, receiving confirmation of authorization and editing personal info"""
+
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--ignore-ssl-errors')
@@ -16,14 +19,14 @@ def test_personal_info(set_up):
     g = Service()
     driver = webdriver.Chrome(options=options, service=g)
 
+    """Authorization and receiving confirmation of authorization"""
     login = Login_page(driver)
     login.authorization()
 
-    time.sleep(5)
-
+    """Editing personal info"""
     pi = Personal_info(driver)
     pi.input_personal_info()
 
-    time.sleep(5)
+    time.sleep(3)
 
     driver.close()

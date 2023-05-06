@@ -16,6 +16,10 @@ class Login_page(Base):
     url = "https://www.litres.ru/"
 
 
+
+    """Authorization and receiving confirmation of authorization"""
+
+
     # Locators
 
 
@@ -110,21 +114,47 @@ class Login_page(Base):
 
 
     def authorization(self):
+
+        """Launch the web-application in browser"""
         self.driver.get(self.url)
+
+        """Maximize browser window"""
         self.driver.maximize_window()
+
+        """Get current URL"""
         self.get_current_url()
+
+        """Click 'Accept rules' pop-up"""
         self.accept_rules()
+
+        """Click authorization window"""
         self.click_login_window()
+
+        """Choose authorization by email"""
         self.click_by_email_button()
+
+        """Input email"""
         self.input_email("qastudent2023@gmail.com")
+
+        """Click Continue button"""
         self.click_continue_button()
+
+        """Input password"""
         self.input_password("StaleElementReferenceException")
+
+        """Click Login button"""
         self.click_login_button()
-        time.sleep(5)
+
+        """Go to Profile section so to check email"""
         self.click_profile_icon()
-        time.sleep(5)
+
+        """Refresh page so to avoid StaleElementReferenceException"""
         self.driver.refresh()
+
+        """Go to Entrance Information Section"""
         self.click_login_info()
+
+        """Compare current email with the login email"""
         self.assert_email(self.get_current_email(), "qastudent2023@gmail.com")
 
 

@@ -16,6 +16,9 @@ class Find_book(Base):
         self.driver = driver
 
 
+    """Finding book in search with the help of key words and in the catalogue"""
+
+
     # Locators
 
     main_page = "//a[@class='Logo-module__wrapper']"
@@ -197,60 +200,146 @@ class Find_book(Base):
 
 
     def find_book_1(self):
+
+        """Finding book in search using book title request"""
+
+        """Go to the Main page"""
         self.go_to_main_page()
+
+        """Input request in the search field"""
         self.input_request("стив джобс")
+
+        "Click Find button"
         self.click_find_button()
+
+        """Mark checkbox Text in the filters"""
         self.mark_checkbox_text()
-        time.sleep(5)
+
+        """Activate high rating toggle1 in the filters"""
         self.activate_high_rating_1()
-        time.sleep(5)
+
+        """Refresh the page so to avoid StaleElementReferenceException"""
         self.driver.refresh()
+
+        """Click the chosen book cover so to go to the Book page"""
         self.click_book_1()
 
+
     def find_book_2(self):
+
+        """Finding book in search using book author request"""
+
+        """Go to the Main page"""
         self.go_to_main_page()
+
+        """Input request in the search field"""
         self.input_request("rex black")
+
+        """Click Find button"""
         self.click_find_button()
+
+        """Mark checkbox Text in the filters"""
         self.mark_checkbox_text()
-        time.sleep(5)
+
+        """Refresh the page so to avoid StaleElementReferenceException"""
         self.driver.refresh()
+
+        """Click the chosen book cover so to go to the Book page"""
         self.click_book_2()
 
+
     def find_book_3(self):
+
+        """Finding book in search using book theme request"""
+
+        """Go to the Main page"""
         self.go_to_main_page()
+
+        """Input request in the search field"""
         self.input_request("тестирование")
+
+        """Click Find button"""
         self.click_find_button()
+
+        """Mark checkbox Text in the filters"""
         self.mark_checkbox_text()
-        time.sleep(5)
+
+        """Wait so not to mark the wrong filter"""
+        time.sleep(3)
+
+        """Activate high rating toggle1 in the filters"""
         self.activate_high_rating_1()
-        time.sleep(5)
+
+        """Scroll to the chosen book"""
         self.scroll_to_book_3()
+
+        """Refresh the page so to avoid StaleElementReferenceException"""
         self.driver.refresh()
+
+        """Click the chosen book cover so to go to the Book page"""
         self.click_book_3()
 
+
     def find_book_4(self):
+
+        """Finding book in the catalogue"""
+
+        """Go to the Main page"""
         self.go_to_main_page()
+
+        """Click the catalogue button"""
         self.click_catalogue()
+
+        """Scroll to 'Knowledge and skills' section"""
         self.scroll_to_knowledge_and_skills()
-        time.sleep(5)
+
+        """Go to 'Knowledge and skills'"""
         self.go_to_knowledge_and_skills()
+
+        """Scroll to 'PC literature' section"""
         self.scroll_to_pc_literature()
-        time.sleep(5)
+
+        """Go to PC literature"""
         self.go_to_pc_literature()
+
+        """Scroll to 'Information Security' section"""
         self.scroll_to_information_security()
-        time.sleep(5)
+
+        """Wait so not to click the wrong button"""
+        time.sleep(3)
+
+        """Click Information Security"""
         self.go_to_information_security()
+
+        """Wait so not to click the wrong button"""
+        time.sleep(3)
+
+        """Scroll to checkbox Text in the filters"""
         self.scroll_to_checkbox_text()
-        time.sleep(5)
+
+        """Mark checkbox Text in the filters"""
         self.mark_checkbox_text()
-        time.sleep(5)
+
+        """Wait so not to mark the wrong filter"""
+        time.sleep(3)
+
+        """Scroll to high rating toggle in the filters"""
         self.scroll_to_high_rating_2()
-        time.sleep(5)
+
+        """Activate high rating toggle2 in the filters"""
         self.activate_high_rating_2()
-        time.sleep(5)
+
+        """Wait so not to mark the wrong filter"""
+        time.sleep(3)
+
+        """Mark checkbox Russian in the filters"""
         self.mark_checkbox_russian()
-        time.sleep(5)
+
+        """Scroll to the chosen book"""
         self.scroll_to_book_4()
-        time.sleep(5)
+
+        """Refresh the page so to avoid StaleElementReferenceException"""
         self.driver.refresh()
+
+        """Click the chosen book cover so to go to the Book page"""
         self.click_book_4()

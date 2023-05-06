@@ -17,6 +17,8 @@ from pages.final_page import Final_page
 @pytest.mark.run(order=1)
 def test_buy_book_1(set_group, set_up):
 
+    """Smoke test: authorization, authorization confirmation, finding book in search using book title request, adding book to Cart, making the payment"""
+
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--ignore-ssl-errors')
@@ -25,35 +27,31 @@ def test_buy_book_1(set_group, set_up):
     g = Service()
     driver = webdriver.Chrome(options=options, service=g)
 
+    """Authorization and receiving confirmation of authorization"""
     login = Login_page(driver)
     login.authorization()
 
-    time.sleep(5)
-
+    """Finding book in search using book title request"""
     fb = Find_book(driver)
     fb.find_book_1()
 
-    time.sleep(5)
-
+    """Getting book info from the book page and adding book to Cart"""
     bp = Book_page(driver)
     bp.book_info()
 
-    time.sleep(5)
-
+    """Comparing book title and book price from the Cart page with the one from the Book page"""
     cp = Cart_page(driver)
     cp.assert_book_info_1()
 
-    time.sleep(5)
-
+    """Payment"""
     pp = Payment_page(driver)
     pp.payment()
 
-    time.sleep(5)
-
+    """Removing book from Cart"""
     fp = Final_page(driver)
     fp.remove_book_from_cart()
 
-    time.sleep(5)
+    time.sleep(3)
 
     driver.close()
 
@@ -61,6 +59,9 @@ def test_buy_book_1(set_group, set_up):
 @pytest.mark.run(order=2)
 def test_buy_book_2(set_up):
 
+
+    """Smoke test: authorization, authorization confirmation, finding book in search using book author request, adding book to Cart, making the payment"""
+
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--ignore-ssl-errors')
@@ -69,35 +70,31 @@ def test_buy_book_2(set_up):
     g = Service()
     driver = webdriver.Chrome(options=options, service=g)
 
+    """Authorization and receiving confirmation of authorization"""
     login = Login_page(driver)
     login.authorization()
 
-    time.sleep(5)
-
+    """Finding book in search using book author request"""
     fb = Find_book(driver)
     fb.find_book_2()
 
-    time.sleep(5)
-
+    """Getting book info from the book page and adding book to Cart"""
     bp = Book_page(driver)
     bp.book_info()
 
-    time.sleep(5)
-
+    """Comparing book title and book price from the Cart page with the one from the Book page"""
     cp = Cart_page(driver)
     cp.assert_book_info_2()
 
-    time.sleep(5)
-
+    """Payment"""
     pp = Payment_page(driver)
     pp.payment()
 
-    time.sleep(5)
-
+    """Removing book from Cart"""
     fp = Final_page(driver)
     fp.remove_book_from_cart()
 
-    time.sleep(5)
+    time.sleep(3)
 
     driver.close()
 
@@ -105,6 +102,8 @@ def test_buy_book_2(set_up):
 @pytest.mark.run(order=4)
 def test_buy_book_3(set_up):
 
+    """Smoke test: authorization, authorization confirmation, finding book in search using book theme request, adding book to Cart, making the payment"""
+
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--ignore-ssl-errors')
@@ -113,35 +112,31 @@ def test_buy_book_3(set_up):
     g = Service()
     driver = webdriver.Chrome(options=options, service=g)
 
+    """Authorization and receiving confirmation of authorization"""
     login = Login_page(driver)
     login.authorization()
 
-    time.sleep(5)
-
+    """Finding book in search using book theme request"""
     fb = Find_book(driver)
     fb.find_book_3()
 
-    time.sleep(5)
-
+    """Getting book info from the book page and adding book to Cart"""
     bp = Book_page(driver)
     bp.book_info()
 
-    time.sleep(5)
-
+    """Comparing book title and book price from the Cart page with the one from the Book page"""
     cp = Cart_page(driver)
     cp.assert_book_info_3()
 
-    time.sleep(5)
-
+    """Payment"""
     pp = Payment_page(driver)
     pp.payment()
 
-    time.sleep(5)
-
+    """Removing book from Cart"""
     fp = Final_page(driver)
     fp.remove_book_from_cart()
 
-    time.sleep(5)
+    time.sleep(3)
 
     driver.close()
 
@@ -149,6 +144,8 @@ def test_buy_book_3(set_up):
 @pytest.mark.run(order=3)
 def test_buy_book_4(set_up):
 
+    """Critical path test: authorization, authorization confirmation, finding book in the catalogue, adding book to Cart, making the payment"""
+
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--ignore-ssl-errors')
@@ -157,35 +154,31 @@ def test_buy_book_4(set_up):
     g = Service()
     driver = webdriver.Chrome(options=options, service=g)
 
+    """Authorization and receiving confirmation of authorization"""
     login = Login_page(driver)
     login.authorization()
 
-    time.sleep(5)
-
+    """Finding book in the catalogue"""
     fb = Find_book(driver)
     fb.find_book_4()
 
-    time.sleep(5)
-
+    """Getting book info from the book page and adding book to Cart"""
     bp = Book_page(driver)
     bp.book_info()
 
-    time.sleep(5)
-
+    """Comparing book title and book price from the Cart page with the one from the Book page"""
     cp = Cart_page(driver)
     cp.assert_book_info_4()
 
-    time.sleep(5)
-
+    """Payment"""
     pp = Payment_page(driver)
     pp.payment()
 
-    time.sleep(5)
-
+    """Removing book from Cart"""
     fp = Final_page(driver)
     fp.remove_book_from_cart()
 
-    time.sleep(5)
+    time.sleep(3)
 
     driver.close()
 

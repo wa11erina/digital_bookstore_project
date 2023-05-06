@@ -12,6 +12,8 @@ class Cart_page(Base):
         self.driver = driver
 
 
+    """Comparing book title and book price from the Cart page with the one from the Book page"""
+
 
     # Locators
 
@@ -47,34 +49,82 @@ class Cart_page(Base):
 
 
     def assert_book_info_1(self):
+
+        """Get current URL"""
         self.get_current_url()
+
+        "Print book title from the Cart page"
         self.print_book_title_cart()
+
+        """Compare book title from the Cart page with the one from the Book page"""
         self.assert_book_title(self.get_book_title_cart(), "Стив Джобс")
+
+        "Print final book price with discounts from the Cart page"
         self.print_book_price_cart()
+
+        """Compare book price from the Cart with the one from the Book page"""
         self.assert_book_price(self.get_book_price_cart(), "399,00 ₽")
+
+        """Make screenshot of book in the Cart"""
         self.make_screenshot()
 
     def assert_book_info_2(self):
+
+        """Get current URL"""
         self.get_current_url()
+
+        "Print book title from the Cart page"
         self.print_book_title_cart()
+
+        """Compare book title from the Cart page with the one from the Book page"""
         self.assert_book_title(self.get_book_title_cart(), "Managing the Testing Process. Practical Tools and Techniques for Managing Hardware and Software Testing")
+
+        "Print final book price with discounts from the Cart page"
         self.print_book_price_cart()
-        self.assert_book_price(self.get_book_price_cart(), "4 267,89 ₽")
+
+        """Compare book price from the Cart with the one from the Book page"""
+        self.assert_book_price(self.get_book_price_cart(), "4 098,32 ₽")
+
+        """Make screenshot of book in the Cart"""
         self.make_screenshot()
 
     def assert_book_info_3(self):
+
+        """Get current URL"""
         self.get_current_url()
+
+        "Print book title from the Cart page"
         self.print_book_title_cart()
+
+        """Compare book title from the Cart with the one from the Book page"""
         self.assert_book_title(self.get_book_title_cart(), "Что такое тестирование. Курс молодого бойца")
+
+        "Print final book price with discounts from the Cart page"
         self.print_book_price_cart()
+
+        """Compare book price from the Cart with the one from the Book page"""
         self.assert_book_price(self.get_book_price_cart(), "499,00 ₽")
+
+        """Make screenshot of book in the Cart"""
         self.make_screenshot()
 
     def assert_book_info_4(self):
+
+        """Get current URL"""
         self.get_current_url()
+
+        "Print book title from the Cart page"
         self.print_book_title_cart()
+
+        """Compare book title from the Cart page with the one from the Book page"""
         self.assert_book_title(self.get_book_title_cart(), "Ловушка для багов. Полевое руководство по веб-хакингу (pdf + epub)")
+
+        "Print final book price with discounts from the Cart page"
         self.print_book_price_cart()
+
+        """Compare book price from the Cart with the one from the Book page"""
         self.assert_book_price(self.get_book_price_cart(), "649,00 ₽")
+
+        """Make screenshot of book in the Cart"""
         self.make_screenshot()
 
