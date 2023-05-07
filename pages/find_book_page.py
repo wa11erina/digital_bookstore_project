@@ -9,16 +9,15 @@ from selenium.common import NoSuchElementException, StaleElementReferenceExcepti
 from selenium.webdriver import ActionChains
 
 from base.class_base import Base
+from logger import Logger
 
 
 class Find_book(Base):
+    """Finding book in search with the help of keywords and in the catalogue"""
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-
-
-    """Finding book in search with the help of key words and in the catalogue"""
 
 
     # Locators
@@ -207,6 +206,8 @@ class Find_book(Base):
 
         with allure.step("Find book 1"):
 
+            Logger.add_start_step(method="find_book_1")
+
             """Go to the Main page"""
             self.go_to_main_page()
 
@@ -228,12 +229,16 @@ class Find_book(Base):
             """Click the chosen book cover so to go to the Book page"""
             self.click_book_1()
 
+            Logger.add_end_step(url=self.driver.current_url, method="find_book_1")
+
 
     def find_book_2(self):
 
         """Finding book in search using book author request"""
 
         with allure.step("Find book 2"):
+
+            Logger.add_start_step(method="find_book_2")
 
             """Go to the Main page"""
             self.go_to_main_page()
@@ -253,12 +258,16 @@ class Find_book(Base):
             """Click the chosen book cover so to go to the Book page"""
             self.click_book_2()
 
+            Logger.add_end_step(url=self.driver.current_url, method="find_book_2")
+
 
     def find_book_3(self):
 
         """Finding book in search using book theme request"""
 
         with allure.step("Find book 3"):
+
+            Logger.add_start_step(method="find_book_3")
 
             """Go to the Main page"""
             self.go_to_main_page()
@@ -287,12 +296,15 @@ class Find_book(Base):
             """Click the chosen book cover so to go to the Book page"""
             self.click_book_3()
 
+            Logger.add_end_step(url=self.driver.current_url, method="find_book_3")
+
 
     def find_book_4(self):
 
         """Finding book in the catalogue"""
 
         with allure.step("Find book 4"):
+            Logger.add_start_step(method="find_book_4")
 
             """Go to the Main page"""
             self.go_to_main_page()
@@ -353,3 +365,5 @@ class Find_book(Base):
 
             """Click the chosen book cover so to go to the Book page"""
             self.click_book_4()
+
+            Logger.add_end_step(url=self.driver.current_url, method="find_book_4")

@@ -6,15 +6,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.class_base import Base
+from logger import Logger
+
 
 class Final_page(Base):
+    """Removing book from Cart"""
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-
-
-    """Removing book from Cart"""
 
 
     # Locators
@@ -74,6 +74,8 @@ class Final_page(Base):
 
         with allure.step("Remove book from Cart"):
 
+            Logger.add_start_step(method="remove_book_from_cart")
+
             """Go back so to leave payment pop-up"""
             self.navigate_back()
 
@@ -97,3 +99,5 @@ class Final_page(Base):
 
             """Click Remove button again so to finally remove book from Cart"""
             self.click_want_to_remove()
+
+            Logger.add_end_step(url=self.driver.current_url, method="remove_book_from_cart")

@@ -7,16 +7,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.class_base import Base
+from logger import Logger
 
 
 class Book_page(Base):
+    """Getting book info from the book page and adding book to Cart"""
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
 
-
-    """Getting book info from the book page and adding book to Cart"""
 
     # Locators
 
@@ -88,6 +88,8 @@ class Book_page(Base):
 
         with allure.step("Book info"):
 
+            Logger.add_start_step(method="book_info")
+
             """Get current URL"""
             self.get_current_url()
 
@@ -108,4 +110,5 @@ class Book_page(Base):
 
             """Click cart icon one more time so to go to Cart"""
             self.click_cart_icon()
+            Logger.add_end_step(url=self.driver.current_url, method="book_info")
 

@@ -6,16 +6,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.class_base import Base
+from logger import Logger
 
 
 class Payment_page(Base):
+    """Payment"""
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-
-
-    """Payment"""
 
 
     # Locators
@@ -45,6 +44,8 @@ class Payment_page(Base):
 
         with allure.step("Payment"):
 
+            Logger.add_start_step(method="payment")
+
             """Get current URL"""
             self.get_current_url()
 
@@ -52,7 +53,9 @@ class Payment_page(Base):
             self.click_navigate_to_payment()
 
             """Wait so to make a screenshot"""
-            time.sleep(3)
+            time.sleep(5)
 
             """Make screenshot"""
             self.make_screenshot()
+
+            Logger.add_end_step(url=self.driver.current_url, method="payment")

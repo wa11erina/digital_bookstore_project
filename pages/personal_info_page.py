@@ -6,16 +6,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.class_base import Base
+from logger import Logger
 
 
 class Personal_info(Base):
+    """Editing personal info"""
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
 
-
-    """Editing personal info"""
 
 
     # Locators
@@ -117,6 +117,8 @@ class Personal_info(Base):
 
         with allure.step("Input personal info"):
 
+            Logger.add_start_step(method="input_personal_info")
+
             """Get current URL"""
             self.get_current_url()
 
@@ -161,3 +163,5 @@ class Personal_info(Base):
 
             """Make screenshot"""
             self.make_screenshot()
+
+            Logger.add_end_step(url=self.driver.current_url, method="input_personal_info")

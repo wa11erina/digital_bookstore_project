@@ -1,0 +1,13 @@
+Enter system
+Start test
+Current url: https://www.litres.ru/
+Rules accepted
+Login button pushed
+By Email button pushed
+Email input
+Continue button pushed
+Password entered
+Login button pushed
+Profile icon pushed
+Navigate to Login Information section
+Finish test

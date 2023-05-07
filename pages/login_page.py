@@ -6,18 +6,17 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common import NoSuchElementException, StaleElementReferenceException
 
 from base.class_base import Base
+from logger import Logger
+
 
 class Login_page(Base):
+    """Authorization and receiving confirmation of authorization"""
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
 
     url = "https://www.litres.ru/"
-
-
-
-    """Authorization and receiving confirmation of authorization"""
 
 
     # Locators
@@ -119,6 +118,8 @@ class Login_page(Base):
 
         with allure.step("Product confirmation"):
 
+            Logger.add_start_step(method="authorization")
+
             """Launch the web-application in browser"""
             self.driver.get(self.url)
 
@@ -160,6 +161,8 @@ class Login_page(Base):
 
             """Compare current email with the login email"""
             self.assert_email(self.get_current_email(), "qastudent2023@gmail.com")
+
+            Logger.add_end_step(url=self.driver.current_url, method="authorization")
 
 
 
