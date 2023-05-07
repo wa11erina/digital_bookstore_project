@@ -32,7 +32,7 @@ class Base:
     """Make screenshot"""
 
     def make_screenshot(self):
-        date_now = datetime.datetime.today().strftime("%Y.%m.%d.%H.%M.%S")
+        date_now = datetime.datetime.now().strftime("%Y.%m.%d.%H.%M.%S")
         name_screenshot = 'screenshot' + date_now + '.png'
         self.driver.save_screenshot('../screen/' + name_screenshot)
         print("Screenshot ready")

@@ -1,3 +1,5 @@
+import allure
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -50,81 +52,92 @@ class Cart_page(Base):
 
     def assert_book_info_1(self):
 
-        """Get current URL"""
-        self.get_current_url()
+        with allure.step("Assert book info 1"):
 
-        "Print book title from the Cart page"
-        self.print_book_title_cart()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Compare book title from the Cart page with the one from the Book page"""
-        self.assert_book_title(self.get_book_title_cart(), "Стив Джобс")
+            "Print book title from the Cart page"
+            self.print_book_title_cart()
 
-        "Print final book price with discounts from the Cart page"
-        self.print_book_price_cart()
+            """Compare book title from the Cart page with the one from the Book page"""
+            self.assert_book_title(self.get_book_title_cart(), "Стив Джобс")
 
-        """Compare book price from the Cart with the one from the Book page"""
-        self.assert_book_price(self.get_book_price_cart(), "399,00 ₽")
+            "Print final book price with discounts from the Cart page"
+            self.print_book_price_cart()
 
-        """Make screenshot of book in the Cart"""
-        self.make_screenshot()
+            """Compare book price from the Cart with the one from the Book page"""
+            self.assert_book_price(self.get_book_price_cart(), "399,00 ₽")
+
+            """Make screenshot of book in the Cart"""
+            self.make_screenshot()
+
 
     def assert_book_info_2(self):
 
-        """Get current URL"""
-        self.get_current_url()
+        with allure.step("Assert book info 2"):
 
-        "Print book title from the Cart page"
-        self.print_book_title_cart()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Compare book title from the Cart page with the one from the Book page"""
-        self.assert_book_title(self.get_book_title_cart(), "Managing the Testing Process. Practical Tools and Techniques for Managing Hardware and Software Testing")
+            "Print book title from the Cart page"
+            self.print_book_title_cart()
 
-        "Print final book price with discounts from the Cart page"
-        self.print_book_price_cart()
+            """Compare book title from the Cart page with the one from the Book page"""
+            self.assert_book_title(self.get_book_title_cart(), "Managing the Testing Process. Practical Tools and Techniques for Managing Hardware and Software Testing")
 
-        """Compare book price from the Cart with the one from the Book page"""
-        self.assert_book_price(self.get_book_price_cart(), "4 098,32 ₽")
+            "Print final book price with discounts from the Cart page"
+            self.print_book_price_cart()
 
-        """Make screenshot of book in the Cart"""
-        self.make_screenshot()
+            """Compare book price from the Cart with the one from the Book page"""
+            self.assert_book_price(self.get_book_price_cart(), "4 098,32 ₽")
+
+            """Make screenshot of book in the Cart"""
+            self.make_screenshot()
+
 
     def assert_book_info_3(self):
 
-        """Get current URL"""
-        self.get_current_url()
+        with allure.step("Assert book info 3"):
 
-        "Print book title from the Cart page"
-        self.print_book_title_cart()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Compare book title from the Cart with the one from the Book page"""
-        self.assert_book_title(self.get_book_title_cart(), "Что такое тестирование. Курс молодого бойца")
+            "Print book title from the Cart page"
+            self.print_book_title_cart()
 
-        "Print final book price with discounts from the Cart page"
-        self.print_book_price_cart()
+            """Compare book title from the Cart with the one from the Book page"""
+            self.assert_book_title(self.get_book_title_cart(), "Что такое тестирование. Курс молодого бойца")
 
-        """Compare book price from the Cart with the one from the Book page"""
-        self.assert_book_price(self.get_book_price_cart(), "499,00 ₽")
+            "Print final book price with discounts from the Cart page"
+            self.print_book_price_cart()
 
-        """Make screenshot of book in the Cart"""
-        self.make_screenshot()
+            """Compare book price from the Cart with the one from the Book page"""
+            self.assert_book_price(self.get_book_price_cart(), "499,00 ₽")
+
+            """Make screenshot of book in the Cart"""
+            self.make_screenshot()
+
 
     def assert_book_info_4(self):
 
-        """Get current URL"""
-        self.get_current_url()
+        with allure.step("Assert book info 4"):
 
-        "Print book title from the Cart page"
-        self.print_book_title_cart()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Compare book title from the Cart page with the one from the Book page"""
-        self.assert_book_title(self.get_book_title_cart(), "Ловушка для багов. Полевое руководство по веб-хакингу (pdf + epub)")
+            "Print book title from the Cart page"
+            self.print_book_title_cart()
 
-        "Print final book price with discounts from the Cart page"
-        self.print_book_price_cart()
+            """Compare book title from the Cart page with the one from the Book page"""
+            self.assert_book_title(self.get_book_title_cart(), "Ловушка для багов. Полевое руководство по веб-хакингу (pdf + epub)")
 
-        """Compare book price from the Cart with the one from the Book page"""
-        self.assert_book_price(self.get_book_price_cart(), "649,00 ₽")
+            "Print final book price with discounts from the Cart page"
+            self.print_book_price_cart()
 
-        """Make screenshot of book in the Cart"""
-        self.make_screenshot()
+            """Compare book price from the Cart with the one from the Book page"""
+            self.assert_book_price(self.get_book_price_cart(), "649,00 ₽")
+
+            """Make screenshot of book in the Cart"""
+            self.make_screenshot()
 

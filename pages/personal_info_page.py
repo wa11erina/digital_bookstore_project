@@ -1,10 +1,12 @@
 import time
+import allure
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.class_base import Base
+
 
 class Personal_info(Base):
 
@@ -113,47 +115,49 @@ class Personal_info(Base):
 
     def input_personal_info(self):
 
-        """Get current URL"""
-        self.get_current_url()
+        with allure.step("Input personal info"):
 
-        """Go to About Me section so to edit personal information"""
-        self.click_about_me()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Click 'Edit name' icon"""
-        self.click_edit_name()
+            """Go to About Me section so to edit personal information"""
+            self.click_about_me()
 
-        """Clear 'First name' field"""
-        self.clear_first_name()
+            """Click 'Edit name' icon"""
+            self.click_edit_name()
 
-        """Input new first name"""
-        self.input_first_name("QA")
+            """Clear 'First name' field"""
+            self.clear_first_name()
 
-        """Clear 'Last name' field"""
-        self.clear_last_name()
+            """Input new first name"""
+            self.input_first_name("QA")
 
-        """Input new last name"""
-        self.input_last_name("Student")
+            """Clear 'Last name' field"""
+            self.clear_last_name()
 
-        """Click Ok button"""
-        self.click_ok_button()
+            """Input new last name"""
+            self.input_last_name("Student")
 
-        """Click 'Edit Words About Me' icon"""
-        self.click_words_about_me_edit()
+            """Click Ok button"""
+            self.click_ok_button()
 
-        """Clear 'Words About Me' field"""
-        self.clear_words_about_me()
+            """Click 'Edit Words About Me' icon"""
+            self.click_words_about_me_edit()
 
-        """Input new Words About Me"""
-        self.input_words_about_me("Think different")
+            """Clear 'Words About Me' field"""
+            self.clear_words_about_me()
 
-        """Click save button"""
-        self.click_save_button()
+            """Input new Words About Me"""
+            self.input_words_about_me("Think different")
 
-        """Compare URL with the one of personal information section"""
-        self.assert_url("https://www.litres.ru/pages/personal_cabinet_about_me/")
+            """Click save button"""
+            self.click_save_button()
 
-        """Wait so to make a screenshot"""
-        time.sleep(3)
+            """Compare URL with the one of personal information section"""
+            self.assert_url("https://www.litres.ru/pages/personal_cabinet_about_me/")
 
-        """Make screenshot"""
-        self.make_screenshot()
+            """Wait so to make a screenshot"""
+            time.sleep(3)
+
+            """Make screenshot"""
+            self.make_screenshot()

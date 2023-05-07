@@ -1,8 +1,10 @@
 import time
+import allure
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+
 from selenium.common import NoSuchElementException, StaleElementReferenceException, TimeoutException
 from selenium.webdriver import ActionChains
 
@@ -203,143 +205,151 @@ class Find_book(Base):
 
         """Finding book in search using book title request"""
 
-        """Go to the Main page"""
-        self.go_to_main_page()
+        with allure.step("Find book 1"):
 
-        """Input request in the search field"""
-        self.input_request("стив джобс")
+            """Go to the Main page"""
+            self.go_to_main_page()
 
-        "Click Find button"
-        self.click_find_button()
+            """Input request in the search field"""
+            self.input_request("стив джобс")
 
-        """Mark checkbox Text in the filters"""
-        self.mark_checkbox_text()
+            "Click Find button"
+            self.click_find_button()
 
-        """Activate high rating toggle1 in the filters"""
-        self.activate_high_rating_1()
+            """Mark checkbox Text in the filters"""
+            self.mark_checkbox_text()
 
-        """Refresh the page so to avoid StaleElementReferenceException"""
-        self.driver.refresh()
+            """Activate high rating toggle1 in the filters"""
+            self.activate_high_rating_1()
 
-        """Click the chosen book cover so to go to the Book page"""
-        self.click_book_1()
+            """Refresh the page so to avoid StaleElementReferenceException"""
+            self.driver.refresh()
+
+            """Click the chosen book cover so to go to the Book page"""
+            self.click_book_1()
 
 
     def find_book_2(self):
 
         """Finding book in search using book author request"""
 
-        """Go to the Main page"""
-        self.go_to_main_page()
+        with allure.step("Find book 2"):
 
-        """Input request in the search field"""
-        self.input_request("rex black")
+            """Go to the Main page"""
+            self.go_to_main_page()
 
-        """Click Find button"""
-        self.click_find_button()
+            """Input request in the search field"""
+            self.input_request("rex black")
 
-        """Mark checkbox Text in the filters"""
-        self.mark_checkbox_text()
+            """Click Find button"""
+            self.click_find_button()
 
-        """Refresh the page so to avoid StaleElementReferenceException"""
-        self.driver.refresh()
+            """Mark checkbox Text in the filters"""
+            self.mark_checkbox_text()
 
-        """Click the chosen book cover so to go to the Book page"""
-        self.click_book_2()
+            """Refresh the page so to avoid StaleElementReferenceException"""
+            self.driver.refresh()
+
+            """Click the chosen book cover so to go to the Book page"""
+            self.click_book_2()
 
 
     def find_book_3(self):
 
         """Finding book in search using book theme request"""
 
-        """Go to the Main page"""
-        self.go_to_main_page()
+        with allure.step("Find book 3"):
 
-        """Input request in the search field"""
-        self.input_request("тестирование")
+            """Go to the Main page"""
+            self.go_to_main_page()
 
-        """Click Find button"""
-        self.click_find_button()
+            """Input request in the search field"""
+            self.input_request("тестирование")
 
-        """Mark checkbox Text in the filters"""
-        self.mark_checkbox_text()
+            """Click Find button"""
+            self.click_find_button()
 
-        """Wait so not to mark the wrong filter"""
-        time.sleep(3)
+            """Mark checkbox Text in the filters"""
+            self.mark_checkbox_text()
 
-        """Activate high rating toggle1 in the filters"""
-        self.activate_high_rating_1()
+            """Wait so not to mark the wrong filter"""
+            time.sleep(3)
 
-        """Scroll to the chosen book"""
-        self.scroll_to_book_3()
+            """Activate high rating toggle1 in the filters"""
+            self.activate_high_rating_1()
 
-        """Refresh the page so to avoid StaleElementReferenceException"""
-        self.driver.refresh()
+            """Scroll to the chosen book"""
+            self.scroll_to_book_3()
 
-        """Click the chosen book cover so to go to the Book page"""
-        self.click_book_3()
+            """Refresh the page so to avoid StaleElementReferenceException"""
+            self.driver.refresh()
+
+            """Click the chosen book cover so to go to the Book page"""
+            self.click_book_3()
 
 
     def find_book_4(self):
 
         """Finding book in the catalogue"""
 
-        """Go to the Main page"""
-        self.go_to_main_page()
+        with allure.step("Find book 4"):
 
-        """Click the catalogue button"""
-        self.click_catalogue()
+            """Go to the Main page"""
+            self.go_to_main_page()
 
-        """Scroll to 'Knowledge and skills' section"""
-        self.scroll_to_knowledge_and_skills()
+            """Click the catalogue button"""
+            self.click_catalogue()
 
-        """Go to 'Knowledge and skills'"""
-        self.go_to_knowledge_and_skills()
+            """Scroll to 'Knowledge and skills' section"""
+            self.scroll_to_knowledge_and_skills()
 
-        """Scroll to 'PC literature' section"""
-        self.scroll_to_pc_literature()
+            """Go to 'Knowledge and skills'"""
+            self.go_to_knowledge_and_skills()
 
-        """Go to PC literature"""
-        self.go_to_pc_literature()
+            """Scroll to 'PC literature' section"""
+            self.scroll_to_pc_literature()
 
-        """Scroll to 'Information Security' section"""
-        self.scroll_to_information_security()
+            """Go to PC literature"""
+            self.go_to_pc_literature()
 
-        """Wait so not to click the wrong button"""
-        time.sleep(3)
+            """Scroll to 'Information Security' section"""
+            self.scroll_to_information_security()
 
-        """Click Information Security"""
-        self.go_to_information_security()
+            """Wait so not to click the wrong button"""
+            time.sleep(3)
 
-        """Wait so not to click the wrong button"""
-        time.sleep(3)
+            """Click Information Security"""
+            self.go_to_information_security()
 
-        """Scroll to checkbox Text in the filters"""
-        self.scroll_to_checkbox_text()
+            """Wait so not to click the wrong button"""
+            time.sleep(3)
 
-        """Mark checkbox Text in the filters"""
-        self.mark_checkbox_text()
+            """Scroll to checkbox Text in the filters"""
+            self.scroll_to_checkbox_text()
 
-        """Wait so not to mark the wrong filter"""
-        time.sleep(3)
+            """Mark checkbox Text in the filters"""
+            self.mark_checkbox_text()
 
-        """Scroll to high rating toggle in the filters"""
-        self.scroll_to_high_rating_2()
+            """Wait so not to mark the wrong filter"""
+            time.sleep(3)
 
-        """Activate high rating toggle2 in the filters"""
-        self.activate_high_rating_2()
+            """Scroll to high rating toggle in the filters"""
+            self.scroll_to_high_rating_2()
 
-        """Wait so not to mark the wrong filter"""
-        time.sleep(3)
+            """Activate high rating toggle2 in the filters"""
+            self.activate_high_rating_2()
 
-        """Mark checkbox Russian in the filters"""
-        self.mark_checkbox_russian()
+            """Wait so not to mark the wrong filter"""
+            time.sleep(3)
 
-        """Scroll to the chosen book"""
-        self.scroll_to_book_4()
+            """Mark checkbox Russian in the filters"""
+            self.mark_checkbox_russian()
 
-        """Refresh the page so to avoid StaleElementReferenceException"""
-        self.driver.refresh()
+            """Scroll to the chosen book"""
+            self.scroll_to_book_4()
 
-        """Click the chosen book cover so to go to the Book page"""
-        self.click_book_4()
+            """Refresh the page so to avoid StaleElementReferenceException"""
+            self.driver.refresh()
+
+            """Click the chosen book cover so to go to the Book page"""
+            self.click_book_4()

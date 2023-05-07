@@ -1,11 +1,11 @@
 import time
+import allure
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.class_base import Base
-
 
 class Final_page(Base):
 
@@ -72,26 +72,28 @@ class Final_page(Base):
 
     def remove_book_from_cart(self):
 
-        """Go back so to leave payment pop-up"""
-        self.navigate_back()
+        with allure.step("Remove book from Cart"):
 
-        """Go to My Books Menu so to remove book from Cart"""
-        self.click_my_books_menu()
+            """Go back so to leave payment pop-up"""
+            self.navigate_back()
 
-        """Click Cart button"""
-        self.click_my_books_cart()
+            """Go to My Books Menu so to remove book from Cart"""
+            self.click_my_books_menu()
 
-        """Wait so not to click the wrong button"""
-        time.sleep(3)
+            """Click Cart button"""
+            self.click_my_books_cart()
 
-        """Compare URL with the one of Cart page"""
-        self.assert_url("https://www.litres.ru/pages/new_basket/")
+            """Wait so not to click the wrong button"""
+            time.sleep(3)
 
-        """Click Remove button under the book"""
-        self.click_remove_book()
+            """Compare URL with the one of Cart page"""
+            self.assert_url("https://www.litres.ru/pages/new_basket/")
 
-        """Wait so to see the confirmation pop-up"""
-        time.sleep(3)
+            """Click Remove button under the book"""
+            self.click_remove_book()
 
-        """Click Remove button again so to finally remove book from Cart"""
-        self.click_want_to_remove()
+            """Wait so to see the confirmation pop-up"""
+            time.sleep(3)
+
+            """Click Remove button again so to finally remove book from Cart"""
+            self.click_want_to_remove()

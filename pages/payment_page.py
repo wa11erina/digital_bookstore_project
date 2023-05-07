@@ -1,4 +1,5 @@
 import time
+import allure
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -31,6 +32,7 @@ class Payment_page(Base):
 
     # Actions
 
+
     def click_navigate_to_payment(self):
         self.get_navigate_to_payment().click()
         print("Navigate to Payment")
@@ -38,16 +40,19 @@ class Payment_page(Base):
 
     # Methods
 
+
     def payment(self):
 
-        """Get current URL"""
-        self.get_current_url()
+        with allure.step("Payment"):
 
-        """Navigate to Payment"""
-        self.click_navigate_to_payment()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Wait so to make a screenshot"""
-        time.sleep(3)
+            """Navigate to Payment"""
+            self.click_navigate_to_payment()
 
-        """Make screenshot"""
-        self.make_screenshot()
+            """Wait so to make a screenshot"""
+            time.sleep(3)
+
+            """Make screenshot"""
+            self.make_screenshot()

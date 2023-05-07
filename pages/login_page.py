@@ -1,4 +1,4 @@
-import time
+import allure
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -112,50 +112,54 @@ class Login_page(Base):
         print("Navigate to Login Information section")
 
 
+    # Methods
+
 
     def authorization(self):
 
-        """Launch the web-application in browser"""
-        self.driver.get(self.url)
+        with allure.step("Product confirmation"):
 
-        """Maximize browser window"""
-        self.driver.maximize_window()
+            """Launch the web-application in browser"""
+            self.driver.get(self.url)
 
-        """Get current URL"""
-        self.get_current_url()
+            """Maximize browser window"""
+            self.driver.maximize_window()
 
-        """Click 'Accept rules' pop-up"""
-        self.accept_rules()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Click authorization window"""
-        self.click_login_window()
+            """Click 'Accept rules' pop-up"""
+            self.accept_rules()
 
-        """Choose authorization by email"""
-        self.click_by_email_button()
+            """Click authorization window"""
+            self.click_login_window()
 
-        """Input email"""
-        self.input_email("qastudent2023@gmail.com")
+            """Choose authorization by email"""
+            self.click_by_email_button()
 
-        """Click Continue button"""
-        self.click_continue_button()
+            """Input email"""
+            self.input_email("qastudent2023@gmail.com")
 
-        """Input password"""
-        self.input_password("StaleElementReferenceException")
+            """Click Continue button"""
+            self.click_continue_button()
 
-        """Click Login button"""
-        self.click_login_button()
+            """Input password"""
+            self.input_password("StaleElementReferenceException")
 
-        """Go to Profile section so to check email"""
-        self.click_profile_icon()
+            """Click Login button"""
+            self.click_login_button()
 
-        """Refresh page so to avoid StaleElementReferenceException"""
-        self.driver.refresh()
+            """Go to Profile section so to check email"""
+            self.click_profile_icon()
 
-        """Go to Entrance Information Section"""
-        self.click_login_info()
+            """Refresh page so to avoid StaleElementReferenceException"""
+            self.driver.refresh()
 
-        """Compare current email with the login email"""
-        self.assert_email(self.get_current_email(), "qastudent2023@gmail.com")
+            """Go to Entrance Information Section"""
+            self.click_login_info()
+
+            """Compare current email with the login email"""
+            self.assert_email(self.get_current_email(), "qastudent2023@gmail.com")
 
 
 

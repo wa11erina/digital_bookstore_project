@@ -2,11 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 import time
+import allure
 
 from pages.login_page import Login_page
 from pages.personal_info_page import Personal_info
 
 
+
+allure.description("Test personal info")
 def test_personal_info(set_up):
 
     """Authorization, receiving confirmation of authorization and editing personal info"""

@@ -1,9 +1,9 @@
-import time
-
-import pytest
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+
+import time
+import pytest
+import allure
 
 from pages.login_page import Login_page
 from pages.find_book_page import Find_book
@@ -13,7 +13,7 @@ from pages.payment_page import Payment_page
 from pages.final_page import Final_page
 
 
-
+allure.description("Test buy book 1")
 @pytest.mark.run(order=1)
 def test_buy_book_1(set_group, set_up):
 
@@ -47,6 +47,8 @@ def test_buy_book_1(set_group, set_up):
     pp = Payment_page(driver)
     pp.payment()
 
+    time.sleep(3)
+
     """Removing book from Cart"""
     fp = Final_page(driver)
     fp.remove_book_from_cart()
@@ -56,9 +58,9 @@ def test_buy_book_1(set_group, set_up):
     driver.close()
 
 
+allure.description("Test buy book 2")
 @pytest.mark.run(order=2)
 def test_buy_book_2(set_up):
-
 
     """Smoke test: authorization, authorization confirmation, finding book in search using book author request, adding book to Cart, making the payment"""
 
@@ -90,6 +92,8 @@ def test_buy_book_2(set_up):
     pp = Payment_page(driver)
     pp.payment()
 
+    time.sleep(3)
+
     """Removing book from Cart"""
     fp = Final_page(driver)
     fp.remove_book_from_cart()
@@ -99,6 +103,7 @@ def test_buy_book_2(set_up):
     driver.close()
 
 
+allure.description("Test buy book 3")
 @pytest.mark.run(order=4)
 def test_buy_book_3(set_up):
 
@@ -132,6 +137,8 @@ def test_buy_book_3(set_up):
     pp = Payment_page(driver)
     pp.payment()
 
+    time.sleep(3)
+
     """Removing book from Cart"""
     fp = Final_page(driver)
     fp.remove_book_from_cart()
@@ -141,6 +148,7 @@ def test_buy_book_3(set_up):
     driver.close()
 
 
+allure.description("Test buy book 4")
 @pytest.mark.run(order=3)
 def test_buy_book_4(set_up):
 
@@ -173,6 +181,8 @@ def test_buy_book_4(set_up):
     """Payment"""
     pp = Payment_page(driver)
     pp.payment()
+
+    time.sleep(3)
 
     """Removing book from Cart"""
     fp = Final_page(driver)

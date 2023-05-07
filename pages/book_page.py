@@ -1,4 +1,5 @@
 import time
+import allure
 
 from selenium.common import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
@@ -85,24 +86,26 @@ class Book_page(Base):
 
     def book_info(self):
 
-        """Get current URL"""
-        self.get_current_url()
+        with allure.step("Book info"):
 
-        """Print book title from book page"""
-        self.print_book_title()
+            """Get current URL"""
+            self.get_current_url()
 
-        """Print final book price with discount from book page"""
-        self.print_book_price()
+            """Print book title from book page"""
+            self.print_book_title()
 
-        """Click button with cart icon"""
-        self.add_book_to_cart()
+            """Print final book price with discount from book page"""
+            self.print_book_price()
 
-        """Close the pop-up about discounts"""
-        self.close_discount_pop_up()
+            """Click button with cart icon"""
+            self.add_book_to_cart()
 
-        """Wait so not to click the wrong button"""
-        time.sleep(3)
+            """Close the pop-up about discounts"""
+            self.close_discount_pop_up()
 
-        """Click cart icon one more time so to go to Cart"""
-        self.click_cart_icon()
+            """Wait so not to click the wrong button"""
+            time.sleep(3)
+
+            """Click cart icon one more time so to go to Cart"""
+            self.click_cart_icon()
 
