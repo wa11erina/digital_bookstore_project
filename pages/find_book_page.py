@@ -290,9 +290,6 @@ class Find_book(Base):
             """Scroll to the chosen book"""
             self.scroll_to_book_3()
 
-            # """Refresh the page so to avoid StaleElementReferenceException"""
-            # self.driver.refresh()
-
             """Click the chosen book cover so to go to the Book page"""
             self.click_book_3()
 

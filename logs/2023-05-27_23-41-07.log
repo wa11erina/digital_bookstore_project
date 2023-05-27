@@ -1,0 +1,286 @@
+
+-----
+Test: test_buy_book.py::test_buy_book_1 (call)
+Start time: 2023-05-27 23:41:09.183516
+Start name method: authorization
+
+End time: 2023-05-27 23:42:13.013604
+End name method: authorization
+URL: https://www.litres.ru/pages/personal_cabinet_login/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_1 (call)
+Start time: 2023-05-27 23:42:13.014602
+Start name method: find_book_1
+
+End time: 2023-05-27 23:43:03.378069
+End name method: find_book_1
+URL: https://www.litres.ru/book/uolter-ayzekson/stiv-dzhobs-2691335/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_1 (call)
+Start time: 2023-05-27 23:43:03.379067
+Start name method: book_info
+
+End time: 2023-05-27 23:43:10.244517
+End name method: book_info
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_1 (call)
+Start time: 2023-05-27 23:43:10.245519
+Start name method: assert_book_info_1
+
+End time: 2023-05-27 23:43:10.555592
+End name method: assert_book_info_1
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_1 (call)
+Start time: 2023-05-27 23:43:10.555592
+Start name method: payment
+
+End time: 2023-05-27 23:43:15.906789
+End name method: payment
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_1 (call)
+Start time: 2023-05-27 23:43:18.908581
+Start name method: remove_book_from_cart
+
+End time: 2023-05-27 23:44:47.801845
+End name method: remove_book_from_cart
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_2 (call)
+Start time: 2023-05-27 23:44:55.119604
+Start name method: authorization
+
+End time: 2023-05-27 23:47:02.035320
+End name method: authorization
+URL: https://www.litres.ru/pages/personal_cabinet_login/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_2 (call)
+Start time: 2023-05-27 23:47:02.035320
+Start name method: find_book_2
+
+End time: 2023-05-27 23:47:51.688264
+End name method: find_book_2
+URL: https://www.litres.ru/book/rex-black/managing-the-testing-process-practical-tools-and-techniques-for-28969885/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_2 (call)
+Start time: 2023-05-27 23:47:51.688264
+Start name method: book_info
+
+End time: 2023-05-27 23:48:29.171432
+End name method: book_info
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_2 (call)
+Start time: 2023-05-27 23:48:29.172420
+Start name method: assert_book_info_2
+
+End time: 2023-05-27 23:48:29.500026
+End name method: assert_book_info_2
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_2 (call)
+Start time: 2023-05-27 23:48:29.501023
+Start name method: payment
+
+End time: 2023-05-27 23:48:34.816468
+End name method: payment
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_2 (call)
+Start time: 2023-05-27 23:48:37.817837
+Start name method: remove_book_from_cart
+
+End time: 2023-05-27 23:50:08.592083
+End name method: remove_book_from_cart
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_4 (call)
+Start time: 2023-05-27 23:50:15.780419
+Start name method: authorization
+
+End time: 2023-05-27 23:51:48.651216
+End name method: authorization
+URL: https://www.litres.ru/pages/personal_cabinet_login/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_4 (call)
+Start time: 2023-05-27 23:51:48.652250
+Start name method: find_book_4
+
+End time: 2023-05-27 23:52:58.466098
+End name method: find_book_4
+URL: https://www.litres.ru/book/yavorski-p/lovushka-dlya-bagov-polevoe-rukovodstvo-po-veb-hakingu-pdf-epub-64083682/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_4 (call)
+Start time: 2023-05-27 23:52:58.467074
+Start name method: book_info
+
+End time: 2023-05-27 23:53:05.887159
+End name method: book_info
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_4 (call)
+Start time: 2023-05-27 23:53:05.888156
+Start name method: assert_book_info_4
+
+End time: 2023-05-27 23:53:06.322343
+End name method: assert_book_info_4
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_4 (call)
+Start time: 2023-05-27 23:53:06.322343
+Start name method: payment
+
+End time: 2023-05-27 23:53:11.631151
+End name method: payment
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_4 (call)
+Start time: 2023-05-27 23:53:14.632649
+Start name method: remove_book_from_cart
+
+End time: 2023-05-27 23:54:02.095152
+End name method: remove_book_from_cart
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_3 (call)
+Start time: 2023-05-27 23:54:08.959551
+Start name method: authorization
+
+End time: 2023-05-27 23:55:10.024956
+End name method: authorization
+URL: https://www.litres.ru/pages/personal_cabinet_login/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_3 (call)
+Start time: 2023-05-27 23:55:10.024956
+Start name method: find_book_3
+
+End time: 2023-05-27 23:56:33.009248
+End name method: find_book_3
+URL: https://www.litres.ru/book/olga-nazina/chto-takoe-testirovanie-kurs-molodogo-boyca-68998117/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_3 (call)
+Start time: 2023-05-27 23:56:33.010316
+Start name method: book_info
+
+End time: 2023-05-27 23:56:39.631287
+End name method: book_info
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_3 (call)
+Start time: 2023-05-27 23:56:39.632283
+Start name method: assert_book_info_3
+
+End time: 2023-05-27 23:56:40.468071
+End name method: assert_book_info_3
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_3 (call)
+Start time: 2023-05-27 23:56:40.468071
+Start name method: payment
+
+End time: 2023-05-27 23:56:45.727115
+End name method: payment
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_buy_book.py::test_buy_book_3 (call)
+Start time: 2023-05-27 23:56:48.727999
+Start name method: remove_book_from_cart
+
+End time: 2023-05-27 23:58:16.632847
+End name method: remove_book_from_cart
+URL: https://www.litres.ru/pages/new_basket/
+
+-----
+
+-----
+Test: test_personal_info.py::test_personal_info (call)
+Start time: 2023-05-27 23:58:23.555022
+Start name method: authorization
+
+End time: 2023-05-28 00:00:04.654012
+End name method: authorization
+URL: https://www.litres.ru/pages/personal_cabinet_login/
+
+-----
+
+-----
+Test: test_personal_info.py::test_personal_info (call)
+Start time: 2023-05-28 00:00:04.654012
+Start name method: input_personal_info
+
+End time: 2023-05-28 00:00:15.095742
+End name method: input_personal_info
+URL: https://www.litres.ru/pages/personal_cabinet_about_me/
+
+-----
