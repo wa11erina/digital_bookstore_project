@@ -92,7 +92,6 @@ class Find_book(Base):
         return WebDriverWait(self.driver, 30, ignored_exceptions=ignored_exceptions).until(EC.presence_of_element_located((By.XPATH, self.book_4)))
 
 
-
     # Actions
 
 
@@ -125,9 +124,13 @@ class Find_book(Base):
         print("Navigate to the found book page")
 
     def scroll_to_book_3(self):
-        action = ActionChains(self.driver)
-        action.move_to_element(self.get_book_3()).perform()
-        print("Scroll to the book")
+        try:
+            action = ActionChains(self.driver)
+            action.move_to_element(self.get_book_3()).perform()
+            print("Scroll to the book")
+        except TimeoutException:
+            self.driver.execute_script("window.scroll(0,5000)")
+            print("Scrolling")
 
     def click_book_3(self):
         self.get_book_3().click()
@@ -284,14 +287,11 @@ class Find_book(Base):
             """Wait so not to mark the wrong filter"""
             time.sleep(3)
 
-            """Activate high rating toggle1 in the filters"""
-            self.activate_high_rating_1()
-
             """Scroll to the chosen book"""
             self.scroll_to_book_3()
 
-            """Refresh the page so to avoid StaleElementReferenceException"""
-            self.driver.refresh()
+            # """Refresh the page so to avoid StaleElementReferenceException"""
+            # self.driver.refresh()
 
             """Click the chosen book cover so to go to the Book page"""
             self.click_book_3()

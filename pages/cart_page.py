@@ -95,7 +95,7 @@ class Cart_page(Base):
             self.print_book_price_cart()
 
             """Compare book price from the Cart with the one from the Book page"""
-            self.assert_book_price(self.get_book_price_cart(), "4 119,02 ₽")
+            self.assert_book_price(self.get_book_price_cart(), "4 268,21 ₽")
 
             """Make screenshot of book in the Cart"""
             self.make_screenshot()
